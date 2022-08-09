@@ -1,0 +1,33 @@
+{
+  "name": "s3.optimize",
+  "version": "1.0.0",
+  "description": "Serverless S3 Optimize",
+  "main": "serverless.yml",
+  "scripts": {
+    "predeploy": "rm -rf node_modules/sharp && npm install --platform=linux --arch=x64 sharp",
+    "deploy": "sls deploy"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "dependencies": {
+    "@middy/core": "^2.5.3",
+    "@middy/http-json-body-parser": "^2.5.3",
+    "aws-sdk": "^2.1187.0",
+    "sharp": "^0.30.7"
+  },
+  "devDependencies": {
+    "@serverless/typescript": "^3.0.0",
+    "@types/aws-lambda": "^8.10.71",
+    "@types/node": "^14.14.25",
+    "@types/sharp": "^0.30.5",
+    "esbuild": "^0.14.11",
+    "json-schema-to-ts": "^1.5.0",
+    "nodemon": "^2.0.19",
+    "serverless": "^3.0.0",
+    "serverless-esbuild": "^1.23.3",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.1.3"
+  }
+}

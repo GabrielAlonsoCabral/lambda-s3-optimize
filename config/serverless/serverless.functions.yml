@@ -1,0 +1,17 @@
+S3Optimize:
+  handler: ./src/handler.s3Optimize
+  environment:
+    bucket: image-optimization-test32
+  events: 
+    - s3:
+          bucket: image-optimization-test32
+          event: s3:ObjectCreated:*
+          rules:
+            - prefix: uploads/
+            - suffix: .jpg
+    - s3:
+        bucket: image-optimization-test32
+        event: s3:ObjectCreated:*
+        rules:
+          - prefix: uploads/
+          - suffix: .png

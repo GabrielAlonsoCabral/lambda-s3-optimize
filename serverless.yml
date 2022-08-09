@@ -1,0 +1,19 @@
+org: gabrielcabral
+app: s3-optimize
+service: s3-optimize
+frameworkVersion: '3'
+
+plugins:
+  ${file(./config/serverless/serverless.plugins.yml)}
+
+provider:
+  ${file(./config/serverless/serverless.provider.yml)}
+
+functions:
+  ${file(./config/serverless/serverless.functions.yml)}
+  
+custom:
+  ${file(./config/serverless/serverless.custom.yml)}
+
+package:
+  ${file(./config/serverless/serverless.package.yml)}
