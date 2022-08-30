@@ -1,4 +1,3 @@
-## SERVERLESS S3 IMAGE OPTIMIZATION
+## SERVERLESS S3 BUCKET OPTIMIZE
 
-This lambda functions run on every photo with extension '.jpg' or '.png' inserted on S3 BUCKET.
-This functions makes a redimension and change quality from the image to optimize your storage service.
+Serverless lambda for AWS S3 Buckets optimization
